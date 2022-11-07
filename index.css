@@ -8,16 +8,14 @@ html, body {
 
 h1{
     color: #48A9A6;
-    margin-bottom: 10px;
     font-size: 20px;
-    margin-left: 10px;
+    margin: 0 0 0 10px;
 }
 
 .logo {
+    transform: translateY(-4px);
     width: 30px;
     height: 30px;
-    margin-top: 9px;
-    margin-left: 5px;
 }
 
 i{
@@ -175,8 +173,4 @@ button:enabled:active{
 
 .isliked {
     color: red;
-}
-
-.black {
-    color: #000;
 }
