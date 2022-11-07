@@ -176,3 +176,7 @@ button:enabled:active{
 .isliked {
     color: red;
 }
+
+.black {
+    color: #000;
+}
