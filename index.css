@@ -18,10 +18,19 @@ h1{
     height: 30px;
 }
 
+.verified {
+    padding-left: 5px;
+    color: #D4B483;
+    transform: translateY(1px);
+    cursor: auto;
+}
+
 i{
     font-size: 15px;
     cursor: pointer;
+    color: #999;
 }
+
 
 .liked{
     color: red;
@@ -132,6 +141,8 @@ button:enabled:active{
     padding: 20px 0 0 0px;
     margin: 10px 0 10px 40px;
     width: 80%;
+    transition: 1s;
+    height: auto;
 }
 
 .handle{
@@ -140,16 +151,6 @@ button:enabled:active{
     color: #555;
     margin-top: 0;
     line-height: 20px;
-}
-
-.fa-solid {
-    color: #999;
-}
-
-.verified {
-    padding-left: 5px;
-    color: #D4B483;
-    transform: translateY(1px);
 }
 
 .roost-text{
@@ -169,8 +170,4 @@ button:enabled:active{
 /* utility */
 .hidden{
     display: none;
-}
-
-.isliked {
-    color: red;
 }

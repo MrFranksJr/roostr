@@ -1,7 +1,7 @@
 //import data
 import { roostData } from '/data.js'
 
-//consts
+//consts & lets
 const roostInput = document.getElementById('roost-input')
 const roostBtn = document.getElementById('roost-btn')
 
@@ -13,7 +13,7 @@ roostBtn.addEventListener('click', crowFunction)
 roostInput.addEventListener('keypress', function(e) {
     // Enter was pressed without shift key
     if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
+        e.preventDefault()
         crowFunction()
     }
 })
@@ -66,7 +66,7 @@ function reRoostClickHandler(uuid) {
 
 //handle replies clicked
 function repliesClickHandler(uuid) {
-    console.log(uuid)
+    document.getElementById("replies-"+uuid).classList.toggle("hidden")
 }
 
 function enableDisableBtn() {
@@ -82,21 +82,54 @@ function enableDisableBtn() {
 function getFeedHtml() {
     let htmlData = ''
     roostData.forEach(roost => {
-        //check if user of roost is verified
-        let userName = ''
-        if (roost.isVerified){
-            userName = `<p class="handle">${roost.handle}<i class="fa-solid fa-circle-check verified"></i></p>`
+        let likeIconClass = ''
+        let reRoostClass = ''
+
+        //check verification
+        let isVerified = ''
+        if (roost.isVerified) {
+            isVerified = `<i class="fa-solid fa-circle-check verified"></i>`
         }
-        else {
-            userName = `<p class="handle">${roost.handle}`
+
+        //check if liked
+        if (roost.isLiked) {
+            likeIconClass = "liked"
         }
+
+        //check if reroosted
+        if (roost.isReRoosted) {
+            reRoostClass = "reroosted"
+        }
+
+        //check if roost has replies
+        let replies = ''
+        let verifiedReply = ''
+        if (roost.replies.length > 0){
+            roost.replies.forEach(function(reply){
+                if (reply.isVerified) {
+                    verifiedReply = `<i class="fa-solid fa-circle-check verified"></i>`
+                }
+                replies += `
+                    <div class="roost-reply">
+                        <div class="roost-inner">
+                            <img src="${reply.profilePic}" class="profile-pic">
+                            <div>
+                                <p class="handle">${reply.handle}${verifiedReply}</p>
+                                <p class="roost-text">${reply.roostText}</p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            })
+        }
+
         //write tweets
         htmlData += `
             <div class="roost">
             <div class="roost-inner">
                 <img src="${roost.profilePic}" class="profile-pic">
                 <div>
-                    ${userName}
+                    <p class="handle">${roost.handle}${isVerified}</p>
                     <p class="roost-text">${roost.roostText}</p>
                     <div class="roost-details">
                         <span class="roost-detail">
@@ -104,17 +137,20 @@ function getFeedHtml() {
                             ${roost.replies.length}
                         </span>
                         <span class="roost-detail">
-                            <i class="fa-solid fa-heart" data-likes="${roost.uuid}"></i>
+                            <i class="fa-solid fa-heart ${likeIconClass}" data-likes="${roost.uuid}"></i>
                             ${roost.likes}
                         </span>
                         <span class="roost-detail">
-                            <i class="fa-solid fa-retweet" data-reroosts="${roost.uuid}"></i>
+                            <i class="fa-solid fa-retweet ${reRoostClass}" data-reroosts="${roost.uuid}"></i>
                             ${roost.reRoosts}
                         </span>
                     </div>   
                 </div>            
             </div>
         </div>
+        <div class="hidden" id="replies-${roost.uuid}">
+            ${replies}
+        </div>  
         `
     })
     return htmlData
