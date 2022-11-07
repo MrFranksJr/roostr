@@ -1,0 +1,82 @@
+export const roostData = [   
+    {
+        handle: `@Neffur 🧝🏻‍♀️`,
+        profilePic: `images/neffi.jpg`,
+        likes: 69,
+        reRoosts: 12,
+        roostText: `Lettin y'all know I have opinions #roostrisbetterthantwitter`,
+        replies: [
+            {
+                handle: `@MrFranks`,
+                isVerified: true,
+                profilePic: `images/profilepic.jpg`,
+                roostText: `Damn straight! 😎☝🏼`,
+            },
+        ],
+        isLiked: false,
+        isReRoosted: false,
+        isVerified: true,
+        uuid: 'a34d7879-29ed-4bce-931a-41f05d389938',
+    },
+    {
+        handle: `@TrollBot66756542 💎`,
+        profilePic: `images/troll.jpg`,
+        likes: 27,
+        reRoosts: 10,
+        roostText: `Buy Bitcoin, ETH Make 💰💰💰 low low prices. 
+            Guaranteed return on investment. HMU DMs open!!`,
+        replies: [],
+        isLiked: false,
+        isReRoosted: false,
+        isVerified: false,
+        uuid: '4b161eee-c0f5-4545-9c4b-8562944223ee',
+    },    
+    {
+        handle: `@elonmusk`,
+        profilePic: `images/musk.jpg`,
+        likes: 6500,
+        reRoosts: 234,
+        roostText: `I need volunteers for a one-way mission to Mars 🪐. No experience necessary🚀`,
+        replies: [
+                  {
+                handle: `@TomCruise`,
+                isVerified: true,
+                profilePic: `images/tcruise.png`,
+                roostText: `Yes! Sign me up! 😎🛩`,
+            },
+                  {
+                handle: `@ChuckNorris`,
+                isVerified: true,
+                profilePic: `images/chucknorris.jpeg`,
+                roostText: `I went last year😴`,
+            },
+        ],
+        isLiked: false,
+        isReRoosted: false,
+        isVerified: true,
+        uuid: '3c23454ee-c0f5-9g9g-9c4b-77835tgs2',
+    },
+        {
+        handle: `@NoobCoder12`,
+        profilePic: `images/flower.png`,
+        likes: 10,
+        reRoosts: 3,
+        roostText: `Are you a coder if you only know HTML?`,
+        replies: [
+            {
+                handle: `@StackOverflower ☣️`,
+                profilePic: `images/overflow.png`,
+                roostText: `No. Onviosuly not. Go get a job in McDonald's.`,
+            },
+            {
+                handle: `@YummyCoder64`,
+                profilePic: `images/love.png`,
+                roostText: `You are wonderful just as you are! ❤️`,
+            },
+        ],
+        isLiked: false,
+        isReRoosted: false,
+        isVerified: false,
+        uuid: '8hy671sff-c0f5-4545-9c4b-1237gyys45',
+    },  
+]

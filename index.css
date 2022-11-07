@@ -1,0 +1,178 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* typography and icons */
+
+h1{
+    color: #48A9A6;
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-top: 9px;
+    margin-left: 5px;
+}
+
+i{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.liked{
+    color: red;
+}
+
+.reroosted {
+  color: limegreen;
+}
+
+/* layout */
+
+main, header{
+    width: 290px;
+    margin: 0 auto;
+}
+
+header{
+    padding-bottom: 25px;
+    padding-top: 20px;
+    display: flex;
+}
+
+.roost-input-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* textareas + btn */
+
+textarea:placeholder-shown {
+    font-size: 20px;
+    line-height: 30px;
+    height: 60px;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+textarea{
+    border: none;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    width: 100%;
+    resize: none;
+    transition: 0.3s;
+    font-size: 12px;
+    height: fit-content;
+}
+
+textarea:focus{
+    font-size: 13px;
+    transition: 0.3s;
+    height: 100px;
+}
+
+
+
+button{
+    background-color: #48A9A6;
+    border: none;
+    color: white;
+    padding: 10px 19px;
+    border-radius: 20px;
+    width: 100%; 
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+button:disabled {
+    opacity: 0.2;
+}
+
+button:enabled:active{
+    transform: translateY(1px);
+    opacity: 0.8;
+}
+
+/* roost */
+
+.roost{
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.roost-inner{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.roost-details{
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.roost-detail{
+    display: flex;
+    gap: 4px;
+}
+
+.roost-reply{
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0px;
+    margin: 10px 0 10px 40px;
+    width: 80%;
+}
+
+.handle{
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 0;
+    line-height: 20px;
+}
+
+.fa-solid {
+    color: #999;
+}
+
+.verified {
+    padding-left: 5px;
+    color: #D4B483;
+    transform: translateY(1px);
+}
+
+.roost-text{
+    width: 207px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* images */
+
+.profile-pic{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 48px;
+}
+
+/* utility */
+.hidden{
+    display: none;
+}
+
+.isliked {
+    color: red;
+}
