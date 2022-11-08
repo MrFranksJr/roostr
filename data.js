@@ -1,9 +1,9 @@
 export const roostData = [   
     {
         handle: `@MrFranks`,
-        profilePic: `images/neffi.jpg`,
-        likes: 69,
-        reRoosts: 12,
+        profilePic: `images/profilepic.jpg`,
+        likes: 2345,
+        reRoosts: 6969,
         roostText: `Welcome to Roostr everyone!! 🥳`,
         replies: [],
         isLiked: false,
@@ -14,7 +14,7 @@ export const roostData = [
     {
         handle: `@Neffur 🧝🏻‍♀️`,
         profilePic: `images/neffi.jpg`,
-        likes: 69,
+        likes: 48,
         reRoosts: 12,
         roostText: `Lettin y'all know I have opinions #roostrisbetterthantwitter`,
         replies: [
