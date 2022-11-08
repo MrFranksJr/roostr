@@ -10,7 +10,7 @@ export const roostData = [
                 handle: `@MrFranks`,
                 isVerified: true,
                 profilePic: `images/profilepic.jpg`,
-                roostText: `Damn straight! 😎☝🏼`,
+                roostText: `Damn straight! 😎☝🏼 <img src="https://media.giphy.com/media/UQU69cVaopX4sTTey6/giphy.gif">`,
             },
         ],
         isLiked: false,

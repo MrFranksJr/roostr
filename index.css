@@ -77,7 +77,7 @@ textarea{
     resize: none;
     transition: 0.3s;
     font-size: 12px;
-    height: fit-content;
+    height: 100px;
 }
 
 textarea:focus{
@@ -159,12 +159,20 @@ button:enabled:active{
     line-height: 20px;
 }
 
+.roost-text img {
+    max-width: 170px;
+}
+
 /* images */
 
 .profile-pic{
     border: 1px solid lightgray;
     border-radius: 50%;
     width: 48px;
+}
+
+.active {
+    color: #000;
 }
 
 /* utility */

@@ -3,20 +3,8 @@ import { roostData } from '/data.js'
 
 //consts & lets
 const roostInput = document.getElementById('roost-input')
-const roostBtn = document.getElementById('roost-btn')
 
-//all eventlisteners
-roostInput.addEventListener('keypress', enableDisableBtn)
-roostInput.addEventListener('blur', enableDisableBtn)
-roostInput.addEventListener('keydown', enableDisableBtn)
-roostBtn.addEventListener('click', crowFunction)
-roostInput.addEventListener('keypress', function(e) {
-    // Enter was pressed without shift key
-    if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault()
-        crowFunction()
-    }
-})
+//All clickhandlers
 document.addEventListener('click', function(e) {
     //like is clicked
     if (e.target.dataset.likes) {
@@ -28,9 +16,24 @@ document.addEventListener('click', function(e) {
     }
     //comments are clicked
     else if (e.target.dataset.replies) {
-        repliesClickHandler(e.target.dataset.replies)
+        repliesClickHandler(e.target.dataset.replies, e.target)
+    }
+    else if (e.target.id === 'roost-btn') {
+        handleCrowBtn()
     }
 })
+//all handlers for the inputfield (keypresses, buttons, etc)
+roostInput.addEventListener('keypress', function(e){
+    if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault()
+        handleCrowBtn()
+    }
+    else {
+        enableDisableBtn
+    }
+})
+roostInput.addEventListener('blur', enableDisableBtn)
+roostInput.addEventListener('keydown', enableDisableBtn)
 
 //handle likes
 function likeClickHandler(uuid) {
@@ -65,11 +68,15 @@ function reRoostClickHandler(uuid) {
 }
 
 //handle replies clicked
-function repliesClickHandler(uuid) {
-    document.getElementById("replies-"+uuid).classList.toggle("hidden")
+function repliesClickHandler(uuid, targetBtn) {
+    if (document.getElementById("replies-"+uuid).innerHTML != "") {
+        document.getElementById("replies-"+uuid).classList.toggle("hidden")
+        targetBtn.classList.toggle('active')
+    }
 }
 
 function enableDisableBtn() {
+    const roostBtn = document.getElementById('roost-btn')
     if(roostInput.value && roostBtn.disabled){
         roostBtn.disabled = false
     }
@@ -148,9 +155,7 @@ function getFeedHtml() {
                 </div>            
             </div>
         </div>
-        <div class="hidden" id="replies-${roost.uuid}">
-            ${replies}
-        </div>  
+        <div class="hidden" id="replies-${roost.uuid}">${replies}</div>  
         `
     })
     return htmlData
@@ -160,7 +165,7 @@ function renderRoosts() {
     document.getElementById('feed').innerHTML = getFeedHtml()
 }
 
-function crowFunction() {
+function handleCrowBtn() {
     console.log(roostInput.value)
 }
 
