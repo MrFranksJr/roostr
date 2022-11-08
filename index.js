@@ -1,5 +1,6 @@
 //import data
 import { roostData } from '/data.js'
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 //consts & lets
 const roostInput = document.getElementById('roost-input')
@@ -27,6 +28,7 @@ roostInput.addEventListener('keypress', function(e){
     if (e.key === 'Enter' && !e.shiftKey) {
         e.preventDefault()
         handleCrowBtn()
+        roostInput.blur()
     }
     else {
         enableDisableBtn
@@ -166,7 +168,24 @@ function renderRoosts() {
 }
 
 function handleCrowBtn() {
-    console.log(roostInput.value)
+    if (roostInput.value) {
+        const roost = 
+        {
+            handle: `@MrFranks`,
+            profilePic: `images/profilepic.jpg`,
+            likes: 0,
+            reRoosts: 0,
+            roostText: roostInput.value ,
+            replies: [],
+            isLiked: false,
+            isReRoosted: false,
+            isVerified: true,
+            uuid: uuidv4()
+        }
+        roostInput.value = ''
+        roostData.unshift(roost)
+        renderRoosts()
+    }
 }
 
 renderRoosts()
