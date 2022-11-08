@@ -1,5 +1,17 @@
 export const roostData = [   
     {
+        handle: `@MrFranks`,
+        profilePic: `images/neffi.jpg`,
+        likes: 69,
+        reRoosts: 12,
+        roostText: `Welcome to Roostr everyone!! 🥳`,
+        replies: [],
+        isLiked: false,
+        isReRoosted: false,
+        isVerified: true,
+        uuid: '7f6631f3-cf71-458b-9481-101de6e1156a',
+    },
+    {
         handle: `@Neffur 🧝🏻‍♀️`,
         profilePic: `images/neffi.jpg`,
         likes: 69,
