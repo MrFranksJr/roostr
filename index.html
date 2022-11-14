@@ -23,12 +23,27 @@
 		</header>
 		<main>
 			<div class="roost-input-area">
-				<img src="images/profilepic.jpg" class="profile-pic">
+				<img src="images/eitje.png" class="profile-pic" id="user-profile-pic">
 				<textarea placeholder="What's new?" id="roost-input"></textarea>
 			</div>
 			<button id="roost-btn" disabled>Cuckoo...</button>
 			<div class="feed" id="feed"></div>
 		</main>
+		<div class="intro-modal" id="intro-modal">
+			<div class="modal-logo">
+				<img src="images/roostr256.png" class="logo">
+				<h1>Welcome to Roostr</h1>
+			</div>
+			<form id="login-form">
+				<label for="username">Choose your Roostr username</label>
+				<input type="text" id="username" placeholder="Username" required>
+				<label class="custom-file-upload">
+					<input type="file"/ id="avatar">
+					<i class="fa fa-cloud-upload"></i> Upload avatar
+				</label>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
 		<script src="index.js" type="module"></script>
 	</body>
 </html>

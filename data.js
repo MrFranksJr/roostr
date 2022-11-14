@@ -1,7 +1,7 @@
-export const roostData = [   
+export let roostData = [   
     {
         handle: `@MrFranks`,
-        profilePic: `images/profilepic.jpg`,
+        profilePic: `images/MrFranks.jpg`,
         likes: 2345,
         reRoosts: 6969,
         roostText: `Welcome to Roostr everyone!! 🥳`,
@@ -21,7 +21,7 @@ export const roostData = [
             {
                 handle: `@MrFranks`,
                 isVerified: true,
-                profilePic: `images/profilepic.jpg`,
+                profilePic: `images/MrFranks.jpg`,
                 roostText: `Damn straight! 😎☝🏼 <img src="https://media.giphy.com/media/UQU69cVaopX4sTTey6/giphy.gif">`,
             },
         ],
@@ -68,27 +68,51 @@ export const roostData = [
         isVerified: true,
         uuid: '3c23454ee-c0f5-9g9g-9c4b-77835tgs2',
     },
-        {
-        handle: `@NoobCoder12`,
-        profilePic: `images/flower.png`,
-        likes: 10,
-        reRoosts: 3,
-        roostText: `Are you a coder if you only know HTML?`,
-        replies: [
-            {
-                handle: `@StackOverflower ☣️`,
-                profilePic: `images/overflow.png`,
-                roostText: `No. Onviosuly not. Go get a job in McDonald's.`,
-            },
-            {
-                handle: `@YummyCoder64`,
-                profilePic: `images/love.png`,
-                roostText: `You are wonderful just as you are! ❤️`,
-            },
-        ],
+    {
+        handle: `@madmax`,
+        profilePic: `images/madmax.jpg`,
+        likes: 956,
+        reRoosts: 36,
+        roostText: `What a day... WHAT A LOVELY DAY!!!`,
+        replies: [],
         isLiked: false,
         isReRoosted: false,
-        isVerified: false,
-        uuid: '8hy671sff-c0f5-4545-9c4b-1237gyys45',
-    },  
+        isVerified: true,
+        uuid: '0f280f82-c7aa-425d-b4f4-03e0a15c67ba',
+    },
+    {
+        handle: `@realDonaldTrump`,
+        profilePic: `images/mrtrump.jpg`,
+        likes: 6969,
+        reRoosts: 2356,
+        roostText: `I've never seen a thin person drink Diet Coke.`,
+        replies: [],
+        isLiked: false,
+        isReRoosted: false,
+        isVerified: true,
+        uuid: 'fd19ee88-d2db-4028-8df9-d7bc6401696a',
+    },
+    {
+    handle: `@NoobCoder12`,
+    profilePic: `images/flower.png`,
+    likes: 10,
+    reRoosts: 3,
+    roostText: `Are you a coder if you only know HTML?`,
+    replies: [
+        {
+            handle: `@StackOverflower ☣️`,
+            profilePic: `images/overflow.png`,
+            roostText: `No. Onviosuly not. Go get a job in McDonald's.`,
+        },
+        {
+            handle: `@YummyCoder64`,
+            profilePic: `images/love.png`,
+            roostText: `You are wonderful just as you are! ❤️`,
+        },
+    ],
+    isLiked: false,
+    isReRoosted: false,
+    isVerified: false,
+    uuid: '8hy671sff-c0f5-4545-9c4b-1237gyys45',
+    },
 ]

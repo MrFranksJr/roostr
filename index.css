@@ -179,3 +179,61 @@ button:enabled:active{
 .hidden{
     display: none;
 }
+
+/* intro modal */
+.intro-modal {
+    width: 300px;
+    background-color: #e4dfda;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+}
+
+.modal-logo {
+    display: flex;
+    justify-content: left
+}
+
+form {
+    width: 100%;
+}
+
+form label {
+    margin: 30px 0px 10px 0px;
+    display: block;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+form input {
+    border: none;
+    padding: 7px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px 12px;
+    cursor: pointer;
+    background-color: #48A9A6;
+    color: #FFF;
+}
+
+.fa-cloud-upload {
+    color: #FFF;
+    margin-right: 5px;
+}
+
+.intro-modal button {
+    margin-top: 30px;
+}
