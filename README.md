@@ -73,4 +73,6 @@ Now, to furthermore leverage the localStorage:
 
 So with these changes made, I can now solely interact with the local array and/or localStorage data to generate new tweets, save the likes and reroosts and so on.
 
+Replies functionality has been skipped in favor of progress towards the next assignments. I technically know exactly how I would tackle such a task, so I'm skipping for now.
+
 Quite a fun little assignment and again, I learned so much!
