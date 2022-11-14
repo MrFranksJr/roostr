@@ -51,7 +51,7 @@ At Scrimba, some interesting stretch goals were proposed:
 
 Some of these were implemented, others not, in favor of some extras of my own that I found more interesting.
 
-# Creating a user
+### Creating a user
 As a first, I wanted the user to be able to choose their own handle to 'roost' with.
 So I created a small modal that asks the user for a (required) username. On top of that, the user is able to push in an avatar image.
 <p align="center">
@@ -63,7 +63,7 @@ So now I store a 'currentUser' object in the localstorage, which will be the dri
 
 Interesting to note; If the user does not upload an avatar, I revert to a default image to show (a cracked egg)
 
-# Moving things to LocalStorage
+### Moving things to LocalStorage
 Once a user has been 'created' it is available in the LocalStorage. This means that next time you load the page, the user is loaded again from localStorage, and the login modal will not be shown again.
 
 Roosting with a user being available will use the currentUser object from the localStorage.
@@ -75,10 +75,10 @@ Now, to furthermore leverage the localStorage:
 
 So with these changes made, I can now solely interact with the local array and/or localStorage data to generate new tweets, save the likes and reroosts and so on.
 
-# Delete Roosts
+### Delete Roosts
 I then went on to implement a deletion functionality. The code will check if the username of the currentuser is equal to the username of the roost. If the outcome is positive, a user can delete one of their own Roosts
 
-# Replies
+### Replies
 Replies functionality has been skipped in favor of progress towards the next assignments. I technically know exactly how I would tackle such a task, so I'm skipping for now.
 
 Quite a fun little assignment and again, I learned so much!
