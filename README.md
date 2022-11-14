@@ -34,9 +34,9 @@ Using the stored data in that array, I run a function that reads out each object
 </p>
 
 Next up, it was necessary to make the reply, like and 'reroost' buttons work. Therefore, an eventlistener was added to the document. that will listen to any clickevent that happens on the screen. Each one of the like, reroost or reply buttons carries with it some data-attributes. Inside the data-attribute, the UUID is stored.
-In the eventlistener, I listen for which target was clicked, and handle appropriately.
+In the eventlistener, I listen for which target was clicked, and handle that click appropriately.
 <p align="center">
-<img alt="screenshot of start screen" src="https://github.com/MrFranksJr/MrFranksJr/blob/main/assets/roostr/event-listener.png.png">
+<img alt="screenshot of replies and like" src="https://github.com/MrFranksJr/MrFranksJr/blob/main/assets/roostr/event-listener.png">
 </p>
 
 On top of that, it needed to be possible to 'roost' onto the site. So a textarea was created, that will allow users to add a message. Upon confirming, the user's message should appear on screen, as it is pushed to the array. Really fun!
